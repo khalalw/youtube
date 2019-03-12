@@ -24,16 +24,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
-        
-//        view.translatesAutoresizingMaskIntoConstraints = false
-        
+        collectionView?.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         
         setupMenuBar()
     }
     
     let menuBar: MenuBar = {
         let mb = MenuBar()
-//        mb.translatesAutoresizingMaskIntoConstraints = false
         return mb
     }()
     
