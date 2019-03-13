@@ -54,7 +54,6 @@ class VideoCell: BaseCell {
     
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
-//        imageView.image = UIImage(named: "humble")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -68,7 +67,6 @@ class VideoCell: BaseCell {
     
     let userProfileImageView: UIImageView = {
         let imageView = UIImageView()
-//        imageView.image = UIImage(named: "kdot")
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
         return imageView
@@ -78,14 +76,12 @@ class VideoCell: BaseCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-//        label.text = "Kendrick Lamar - HUMBLE"
         return label
     }()
     
     let subtitleTextView: UITextView = {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
-//        textView.text = "KendrickLamarVEVO • 612,881,094 views • 2 years ago"
         textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
         textView.textColor = UIColor.lightGray
         return textView
