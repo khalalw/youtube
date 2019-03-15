@@ -10,35 +10,80 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var videos: [Video] = {
-        
-        var kendrickChannel = Channel()
-        kendrickChannel.name = "KendrickLamarVEVO"
-        kendrickChannel.profileImageName = "kdot"
-        
-        var rajChannel = Channel()
-        rajChannel.name = "Rexx Life Raj"
-        rajChannel.profileImageName = "poppy"
-        
-        
-       var humbleVideo = Video()
-        humbleVideo.title = "Kendrick Lamar - HUMBLE"
-        humbleVideo.thumbnailImageName = "humble"
-        humbleVideo.views = 612881094
-        
-        humbleVideo.channel = kendrickChannel
-        
-        var othersideVideo = Video()
-        othersideVideo.title = "Rexx Life Raj - The Otherside (Official Video)"
-        othersideVideo.thumbnailImageName = "otherside"
-        othersideVideo.views = 201636
-        othersideVideo.channel = rajChannel
-        
-        return [humbleVideo, othersideVideo]
-    }()
+//    var videos: [Video] = {
+//
+//        var kendrickChannel = Channel()
+//        kendrickChannel.name = "KendrickLamarVEVO"
+//        kendrickChannel.profileImageName = "kdot"
+//
+//        var rajChannel = Channel()
+//        rajChannel.name = "Rexx Life Raj"
+//        rajChannel.profileImageName = "poppy"
+//
+//
+//       var humbleVideo = Video()
+//        humbleVideo.title = "Kendrick Lamar - HUMBLE"
+//        humbleVideo.thumbnailImageName = "humble"
+//        humbleVideo.views = 612881094
+//
+//        humbleVideo.channel = kendrickChannel
+//
+//        var othersideVideo = Video()
+//        othersideVideo.title = "Rexx Life Raj - The Otherside (Official Video)"
+//        othersideVideo.thumbnailImageName = "otherside"
+//        othersideVideo.views = 201636
+//        othersideVideo.channel = rajChannel
+//
+//        return [humbleVideo, othersideVideo]
+//    }()
+    
+    var videos: [Video]?
+    
+    func fetchVideos() {
+        let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                self.videos = [Video]()
+                
+                for dictionary in json as! [[String: AnyObject]] {
+                    var video = Video()
+                    video.title = dictionary["title"] as? String
+                    video.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
+                    video.views = dictionary["number_of_views"] as? NSNumber
+                    
+                    let channelDictionary = dictionary["channel"] as! [String: AnyObject]
+                    
+                    var channel = Channel()
+                    channel.name = channelDictionary["name"] as? String
+                    channel.profileImageName = channelDictionary["profile_image_name"] as? String
+                    
+                    video.channel = channel
+                    
+                    
+                    self.videos?.append(video)
+                }
+                
+                self.collectionView?.reloadData()
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+            
+        }.resume()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchVideos()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.title = "Home"
         navigationController?.navigationBar.isTranslucent = false
@@ -90,12 +135,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videos.count
+        return videos?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
-        cell.video = videos[indexPath.item]
+        cell.video = videos?[indexPath.item]
         return cell
     }
 
@@ -103,7 +148,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = (view.frame.width - 16 - 16) * 9 / 16
-        return CGSize(width: view.frame.width, height: height + 16 + 68)
+        return CGSize(width: view.frame.width, height: height + 16 + 88)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
