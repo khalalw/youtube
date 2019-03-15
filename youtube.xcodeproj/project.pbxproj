@@ -13,6 +13,7 @@
 		2E046E1922379E28003C7DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E046E1822379E28003C7DE2 /* Main.storyboard */; };
 		2E046E1C2238BD71003C7DE2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E046E1B2238BD71003C7DE2 /* Video.swift */; };
 		2E046E1E2238E69C003C7DE2 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E046E1D2238E69C003C7DE2 /* Channel.swift */; };
+		2EE67A22223B304C0097ED16 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE67A21223B304C0097ED16 /* MenuCell.swift */; };
 		2EEB266D2236202F003675CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB266C2236202F003675CC /* AppDelegate.swift */; };
 		2EEB266F2236202F003675CC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB266E2236202F003675CC /* HomeController.swift */; };
 		2EEB267422362031003675CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB267322362031003675CC /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		2E046E1822379E28003C7DE2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2E046E1B2238BD71003C7DE2 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		2E046E1D2238E69C003C7DE2 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		2EE67A21223B304C0097ED16 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		2EEB26692236202F003675CC /* youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEB266C2236202F003675CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEB266E2236202F003675CC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				2E046E1322377EC3003C7DE2 /* VideoCell.swift */,
 				2E046E1622378408003C7DE2 /* MenuBar.swift */,
+				2EE67A21223B304C0097ED16 /* MenuCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				2E046E1422377EC3003C7DE2 /* VideoCell.swift in Sources */,
 				2E046E1122377DD6003C7DE2 /* Extensions.swift in Sources */,
 				2EEB266D2236202F003675CC /* AppDelegate.swift in Sources */,
+				2EE67A22223B304C0097ED16 /* MenuCell.swift in Sources */,
 				2E046E1722378408003C7DE2 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
