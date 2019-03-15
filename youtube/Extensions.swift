@@ -43,11 +43,3 @@ extension UIImageView {
     }
 }
 
-extension UITextView {
-    func adjustUITextViewHeight(arg : UITextView)
-    {
-        arg.translatesAutoresizingMaskIntoConstraints = true
-        arg.sizeToFit()
-        arg.isScrollEnabled = false
-    }
-}

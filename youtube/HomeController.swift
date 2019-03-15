@@ -9,34 +9,7 @@
 import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
-//    var videos: [Video] = {
-//
-//        var kendrickChannel = Channel()
-//        kendrickChannel.name = "KendrickLamarVEVO"
-//        kendrickChannel.profileImageName = "kdot"
-//
-//        var rajChannel = Channel()
-//        rajChannel.name = "Rexx Life Raj"
-//        rajChannel.profileImageName = "poppy"
-//
-//
-//       var humbleVideo = Video()
-//        humbleVideo.title = "Kendrick Lamar - HUMBLE"
-//        humbleVideo.thumbnailImageName = "humble"
-//        humbleVideo.views = 612881094
-//
-//        humbleVideo.channel = kendrickChannel
-//
-//        var othersideVideo = Video()
-//        othersideVideo.title = "Rexx Life Raj - The Otherside (Official Video)"
-//        othersideVideo.thumbnailImageName = "otherside"
-//        othersideVideo.views = 201636
-//        othersideVideo.channel = rajChannel
-//
-//        return [humbleVideo, othersideVideo]
-//    }()
-    
+
     var videos: [Video]?
     
     func fetchVideos() {
