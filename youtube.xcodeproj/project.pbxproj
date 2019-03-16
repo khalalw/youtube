@@ -19,6 +19,8 @@
 		2EEB267422362031003675CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB267322362031003675CC /* Assets.xcassets */; };
 		2EEB267722362031003675CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB267522362031003675CC /* LaunchScreen.storyboard */; };
 		2EEEC1BD223CDB4200AFDFB0 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEEC1BC223CDB4200AFDFB0 /* SettingsLauncher.swift */; };
+		2EEEC1BF223D880E00AFDFB0 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEEC1BE223D880E00AFDFB0 /* SettingCell.swift */; };
+		2EEEC1C1223D945A00AFDFB0 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEEC1C0223D945A00AFDFB0 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2EEB267622362031003675CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EEB267822362031003675CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEEC1BC223CDB4200AFDFB0 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		2EEEC1BE223D880E00AFDFB0 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		2EEEC1C0223D945A00AFDFB0 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,10 @@
 		2E046E1222377E65003C7DE2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2E046E1322377EC3003C7DE2 /* VideoCell.swift */,
 				2E046E1622378408003C7DE2 /* MenuBar.swift */,
 				2EE67A21223B304C0097ED16 /* MenuCell.swift */,
+				2E046E1322377EC3003C7DE2 /* VideoCell.swift */,
+				2EEEC1BE223D880E00AFDFB0 /* SettingCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 			children = (
 				2E046E1B2238BD71003C7DE2 /* Video.swift */,
 				2E046E1D2238E69C003C7DE2 /* Channel.swift */,
+				2EEEC1C0223D945A00AFDFB0 /* Setting.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -194,8 +200,10 @@
 				2E046E1C2238BD71003C7DE2 /* Video.swift in Sources */,
 				2E046E1422377EC3003C7DE2 /* VideoCell.swift in Sources */,
 				2E046E1122377DD6003C7DE2 /* Extensions.swift in Sources */,
+				2EEEC1C1223D945A00AFDFB0 /* Setting.swift in Sources */,
 				2EEB266D2236202F003675CC /* AppDelegate.swift in Sources */,
 				2EE67A22223B304C0097ED16 /* MenuCell.swift in Sources */,
+				2EEEC1BF223D880E00AFDFB0 /* SettingCell.swift in Sources */,
 				2E046E1722378408003C7DE2 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
