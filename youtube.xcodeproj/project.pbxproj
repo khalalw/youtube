@@ -18,6 +18,7 @@
 		2EEB266F2236202F003675CC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB266E2236202F003675CC /* HomeController.swift */; };
 		2EEB267422362031003675CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB267322362031003675CC /* Assets.xcassets */; };
 		2EEB267722362031003675CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB267522362031003675CC /* LaunchScreen.storyboard */; };
+		2EEEC1BD223CDB4200AFDFB0 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEEC1BC223CDB4200AFDFB0 /* SettingsLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2EEB267322362031003675CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EEB267622362031003675CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EEB267822362031003675CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EEEC1BC223CDB4200AFDFB0 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2EEB266E2236202F003675CC /* HomeController.swift */,
+				2EEEC1BC223CDB4200AFDFB0 /* SettingsLauncher.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				2E046E1E2238E69C003C7DE2 /* Channel.swift in Sources */,
 				2EEB266F2236202F003675CC /* HomeController.swift in Sources */,
+				2EEEC1BD223CDB4200AFDFB0 /* SettingsLauncher.swift in Sources */,
 				2E046E1C2238BD71003C7DE2 /* Video.swift in Sources */,
 				2E046E1422377EC3003C7DE2 /* VideoCell.swift in Sources */,
 				2E046E1122377DD6003C7DE2 /* Extensions.swift in Sources */,

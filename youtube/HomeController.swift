@@ -42,7 +42,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     self.videos?.append(video)
                 }
                 
-                self.collectionView?.reloadData()
+//                DispatchQueue.main.async {
+                        self.collectionView?.reloadData()
+//                }
+                
                 
             } catch let jsonError {
                 print(jsonError)
@@ -103,9 +106,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         print(123)
     }
     
+    
+    let settingsLauncher = SettingsLauncher()
     @objc func handleMore() {
-        print(456)
+        settingsLauncher.showSettings()
     }
+       
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videos?.count ?? 0
