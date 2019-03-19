@@ -61,7 +61,7 @@ class CustomImageView: UIImageView {
                 self.image = UIImage(data: data!)
             }
             
-            }.resume()
+        }.resume()
     }
 }
 
