@@ -42,9 +42,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     self.videos?.append(video)
                 }
                 
-//                DispatchQueue.main.async {
+                DispatchQueue.main.async {
                         self.collectionView?.reloadData()
-//                }
+                }
                 
                 
             } catch let jsonError {
