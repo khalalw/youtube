@@ -58,9 +58,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchVideos()
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+
         navigationItem.title = "Home"
         navigationController?.navigationBar.isTranslucent = false
         
@@ -103,7 +101,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     @objc func handleSearch() {
-        print(123)
+
     }
     
     
